@@ -1,6 +1,6 @@
 {
-  "buildCommand": "true",
+  "buildCommand": "mkdir -p public && cp -r artifacts/novacia/public/* public/",
   "installCommand": "true",
-  "outputDirectory": "artifacts/novacia/public",
+  "outputDirectory": "public",
   "framework": null
 }
