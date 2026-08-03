@@ -8,6 +8,20 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18096407370');
+  gtag('config', 'AW-732406365');
+</script>
+<!-- Event snippet for CHAMADA WHATSAPP NOVACIA (AW-732406365) -->
+<script>
+function gtag_report_conversion_2(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') { window.location = url; }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-732406365/rICXCPK-stscEN3Ent0C',
+    'event_callback': callback
+  });
+  return false;
+}
 </script>
 <!-- Event snippet for Contato via WhatsApp conversion -->
 <script>
@@ -1826,6 +1840,7 @@ document.addEventListener('keydown',e=>{
 document.querySelectorAll('a[href*="wa.me/556122441030"]').forEach(function(btn){
   btn.addEventListener('click',function(){
     gtag('event','conversion',{'send_to':'AW-18096407370/dY87CJWd3rccEMqGhbVD'});
+    gtag('event','conversion',{'send_to':'AW-732406365/rICXCPK-stscEN3Ent0C'});
   });
 });
 </script>
