@@ -9,6 +9,19 @@
   gtag('js', new Date());
   gtag('config', 'AW-18096407370');
 </script>
+<!-- Event snippet for Contato via WhatsApp conversion -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') { window.location = url; }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18096407370/dY87CJWd3rccEMqGhbVD',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Telefonia para Empresas NOVACIA | PABX na Nuvem, Ramais Ilimitados</title>
