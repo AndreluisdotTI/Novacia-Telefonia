@@ -1,0 +1,92 @@
+
+novaciainternet.anuncios@gmail.com enviou uma tag de acompanhamento de conversões
+
+O usuário novaciainternet.anuncios@gmail.com do Google Ads compartilhou uma tag de acompanhamento de conversões para monitorar os cliques no seu site. Para adicioná-la ao site, siga as instruções abaixo:
+
+Como usar a tag
+
+Para que o acompanhamento de conversões funcione, você precisa instalar a tag de acompanhamento de conversões, que consiste em uma tag do Google e um snippet de evento. Além disso, é necessário adicionar um código para que o Google Ads só registre uma conversão quando um cliente clicar no link, na imagem ou no botão escolhidos. Se você quiser instalar a tag com o Google Tag Manager, siga estas instruções.
+
+Se alguma das suas páginas da Web foi desenvolvida com a tecnologia AMP, você precisará adicionar tags às versões AMP e HTML. Há instruções para ambas.
+
+PÁGINAS HTML
+
+Instale a tag do Google em cada página do seu site.
+Abra o HTML de cada página.
+Escolha entre estas opções:
+Se você não instalou a tag do Google no seu site, copie a tag abaixo e cole-a entre as tags head (<head></head>):
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18096407370"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18096407370'); </script>
+
+Veja mais diretrizes em Como configurar a tag do Google.
+
+Se você instalou a tag do Google no seu site usando outro produto do Google (por exemplo, o Google Analytics) ou outra conta do Google Ads, copie o comando "config" abaixo e adicione-o a todas as instâncias da tag do Google, logo acima da tag final </script>.
+
+gtag('config', 'AW-18096407370');
+
+* Se você ou uma conta de administrador já instalou a tag do Google no seu site durante a configuração da tag para outra ação de conversão, verifique se ela está presente em todas as páginas do site e se o comando config contém este ID de conversão da conta do Google Ads: AW-18096407370
+Salve as alterações feitas nas suas páginas da Web.
+
+Instale o snippet de evento na página que contém o botão ou link que você quer rastrear.
+Abra o HTML da página.
+Copie o snippet abaixo e cole-o entre as tags head (<head></head>) da página, logo após a tag do Google.
+
+<!-- Event snippet for Contato via WhatsApp conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-18096407370/dY87CJWd3rccEMqGhbVD', 'event_callback': callback }); return false; } </script>
+
+
+Adicione um atributo onclick diretamente ao código do botão ou link que você quer rastrear. O código a ser escolhido dependerá de como o link ou botão aparecerá no seu site: link de texto, botão ou imagem de botão.
+
+Adicione o código a um link de texto: no código abaixo, substitua "http://example.com/your-link" pelo URL do site ou link do telefone e "Fazer download agora" pelo texto do link.
+
+<a onclick="return gtag_report_conversion('http://example.com/your-link');" href="http://example.com/your-link">Fazer download agora</a>
+
+Adicione o código a um botão: esse código mostra como adicionar o recurso de acompanhamento de cliques a um botão usando a tag <button>. Substitua "http://example.com/your-link" pelo URL do seu site.
+
+<button onclick="return gtag_report_conversion('http://example.com/your-link')">Enviar</button>
+
+Adicione o código a uma imagem de botão: no código abaixo, substitua "download_button.gif" pela imagem do seu botão, width e height pelos parâmetros do botão e "http://example.com/your-link" pelo URL do link.
+
+<img src="download_button.gif" alt="Baixar o artigo" width="32" height="32" onclick="return gtag_report_conversion('http://example.com/your-link')" />
+
+Salve as alterações na sua página da Web.
+PÁGINAS AMP
+
+Siga estas instruções para todas as páginas criadas com a tecnologia AMP.
+
+Instale a tag do Google em cada página do seu site.
+Abra o HTML de cada página.
+Escolha entre estas opções:
+Se você não instalou a tag do Google no seu site, adicione estas duas tags:
+Primeiro, copie a tag abaixo e cole-a entre as tags head (<head></head>), antes da biblioteca JavaScript do AMP.
+
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+Em seguida, copie a tag abaixo e cole-a entre as tags body (<body></body>) de todas as suas páginas AMP.
+
+<!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include"> <script type="application/json"> { "vars": { "gtag_id": "AW-18096407370", "config": { "AW-18096407370": { "groups": "default" } } }, "triggers": { } } </script> </amp-analytics>
+
+Veja mais diretrizes em Como configurar a tag do Google.
+Se você instalou a tag do Google no seu site usando outro produto do Google (por exemplo, o Google Analytics) ou outra conta do Google Ads, copie a linha abaixo e cole-a na seção "config" de todas as instâncias da tag do Google.
+
+"AW-18096407370": { "groups": "default" }
+
+Se você ou uma conta de administrador já tiver instalado a tag do Google no seu site durante a configuração da tag para outra ação de conversão, verifique se ela está presente em todas as páginas do site e se a seção "config" contém este ID de conversão da conta do Google Ads: AW-18096407370
+Salve as alterações feitas nas suas páginas da Web.
+
+Instale o snippet de evento na página que contém o botão ou link que você quer rastrear.
+Abra o HTML da página.
+Encontre um seletor de CSS para o botão ou link que você quer rastrear. Por exemplo, você poderá usar "#purchase" ou ".out-button" se o botão estiver definido da seguinte maneira:
+
+<button id="purchase" class="out-button">Clique</button>
+
+Copie o snippet abaixo e cole-o na seção "triggers" da tag do Google. Mude o valor de "selector" para corresponder ao item clicado.
+
+"C_LSEriJzM53A": { "on": "click", "selector": "CSS_SELECTOR", "vars": { "event_name": "conversion", "send_to": ["AW-18096407370/dY87CJWd3rccEMqGhbVD"] } }
+
+Salve as alterações na sua página da Web.
+Saiba mais sobre como rastrear cliques no seu site como conversões.
+
+Atenciosamente,
+
+Equipe do Google Ads
+
