@@ -1,0 +1,78 @@
+andreluis.ads.onitel@gmail.com enviou uma tag de acompanhamento de conversões
+
+O usuário andreluis.ads.onitel@gmail.com do Google Ads compartilhou uma tag de acompanhamento para monitorar as conversões no seu site. Para adicioná-la ao site, siga as instruções abaixo:
+
+Como usar a tag
+
+Para que o acompanhamento de conversões funcione, você precisa instalar a tag desse recurso, que é composta por uma tag do Google e um snippet de evento. Para instalar a tag com o Google Tag Manager, siga estas instruções.
+
+Se alguma das suas páginas da Web foi desenvolvida com a tecnologia AMP, você precisará adicionar tags às versões AMP e HTML. Há instruções para ambas.
+
+PÁGINAS HTML
+
+Instale a tag do Google em cada página do seu site.
+Abra o HTML de cada página.
+Escolha entre estas opções:
+Se você não instalou a tag do Google no seu site, copie a tag abaixo e cole-a entre as tags head (<head></head>):
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-732406365"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-732406365'); </script>
+
+Veja mais diretrizes em Como configurar a tag do Google.
+
+Se você instalou a tag do Google no seu site usando outro produto do Google (por exemplo, o Google Analytics) ou outra conta do Google Ads, copie o comando "config" abaixo e adicione-o a todas as instâncias da tag do Google, logo acima da tag final </script>.
+
+gtag('config', 'AW-732406365');
+
+* Se você ou uma conta de administrador já instalou a tag do Google no seu site durante a configuração da tag para outra ação de conversão, verifique se ela está presente em todas as páginas do site e se o comando config contém este ID de conversão da conta do Google Ads: AW-732406365
+Salve as alterações feitas nas suas páginas da Web.
+
+Instale o snippet de evento na página de conversão, que é a página do seu site que os clientes acessam depois de concluir uma conversão. Um exemplo é a página que exibe a mensagem "Agradecemos sua compra".
+Abra o HTML da página de conversão.
+Copie o snippet abaixo e cole-o entre as tags head (<head></head>) da página, logo após a tag do Google.
+
+<!-- Event snippet for CHAMADA WHATSAPP NOVACIA conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-732406365/rICXCPK-stscEN3Ent0C'}); </script>
+
+Salve as alterações na sua página da Web.
+PÁGINAS AMP
+
+Siga estas instruções para todas as páginas criadas com a tecnologia AMP.
+
+Instale a tag do Google em cada página do seu site.
+Abra o HTML de cada página.
+Escolha entre estas opções:
+Se você não instalou a tag do Google no seu site, adicione estas duas tags:
+Primeiro, copie a tag abaixo e cole-a entre as tags head (<head></head>), antes da biblioteca JavaScript do AMP.
+
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+Em seguida, copie a tag abaixo e cole-a entre as tags body (<body></body>) de todas as suas páginas AMP.
+
+<!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include"> <script type="application/json"> { "vars": { "gtag_id": "AW-732406365", "config": { "AW-732406365": { "groups": "default" } } }, "triggers": { } } </script> </amp-analytics>
+
+Veja mais diretrizes em Como configurar a tag do Google.
+Se você instalou a tag do Google no seu site usando outro produto do Google (por exemplo, o Google Analytics) ou outra conta do Google Ads, copie a linha abaixo e cole-a na seção "config" de todas as instâncias da tag do Google.
+
+"AW-732406365": { "groups": "default" }
+
+Se você ou uma conta de administrador já tiver instalado a tag do Google no seu site durante a configuração da tag para outra ação de conversão, verifique se ela está presente em todas as páginas do site e se a seção "config" contém este ID de conversão da conta do Google Ads: AW-732406365
+Salve as alterações feitas nas suas páginas da Web.
+
+Instale o snippet de evento na página de conversão, que é a página do seu site que os clientes acessam depois de concluir uma conversão. Um exemplo é a página que exibe a mensagem "Agradecemos sua compra".
+Abra o HTML da página de conversão.
+Copie o snippet abaixo e cole-o na seção "triggers" da tag do Google.
+
+"C_8XGe9wYR_68": { "on": "visible", "vars": { "event_name": "conversion", "send_to": ["AW-732406365/rICXCPK-stscEN3Ent0C"] } }
+
+Salve as alterações na sua página da Web.
+Saiba mais sobre como adicionar uma tag de acompanhamento de conversões ao seu site.
+
+Atenciosamente,
+
+Equipe do Google Ads
+
+Este e-mail foi enviado para informar você sobre sua conta do Google Ads.
+
+Google
+© 2026 Google LLC
+1600 Amphitheatre Parkway,
+Mountain View, CA 94043
